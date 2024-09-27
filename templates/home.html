@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+  
+ 
+ <div class="main-container" style="display: flex; align-items: center; justify-content: space-between; height: 100vh; padding: 0 20px;">
+    <div class="image-container" style="flex: 1; text-align: center; margin-right: 20px;">
+        <img src="{{ url_for('static', filename='images/img1.png') }}" alt="Centered Image" style="max-width: 100%; height: auto; margin-left: 20px;">
+    </div>
+    <div class="text-box" style="flex: 1; background-color: #e9ecef; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-left: 20px; text-align: right;">
+      
+       
+        <h2>Welcome to PaperInsights</h2>
+        <p>Discover research paper summaries and insights!</p>
+         
+         
+ <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+
+    </div>
+</div>
+{% endblock %}

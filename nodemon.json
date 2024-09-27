@@ -1,0 +1,6 @@
+{
+    "exec": "python app.py",        
+    "ext": "py html css",             
+    "watch": ["app.py", "templates/", "static/"]  
+  }
+  
