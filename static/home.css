@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa; /* Light background color */
+}
+
+.main-container {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space out items */
+    height: 100vh; /* Full viewport height */
+    padding: 0 20px; /* Padding on left and right */
+}
+
+.image-container {
+    flex: 1; /* Take up 50% of the space */
+    text-align: center; /* Center image */
+    margin-right: 20px; /* Space between image and text box */
+}
+
+.image-container img {
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.text-box {
+    flex: 1; /* Take up 50% of the space */
+    background-color: #e9ecef; /* Light gray background */
+    padding: 20px; /* Padding inside the box */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-left: 2000; /* Space from the left side */
+    text-align: right; /* Align text to the right */
+}
+
+.text-box h2 {
+    margin: 0 0 10px; /* Space below the heading */
+    color: #343a40; /* Darker text color */
+}
+
+.text-box p {
+    color: #495057; /* Slightly lighter text color */
+    line-height: 1.6; /* Improve line spacing */
+}

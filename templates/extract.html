@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}Extract Page{% endblock %}
+
+{% block content %}
+ 
+<div class="container mt-2">
+    <h3 class="text-center">Upload your research paper to extract entities </h3>
+    <form action="/extract" method="post" enctype="multipart/form-data">
+        <div class="form-group mt-4">
+            <label for="pdf">Choose PDF:</label>
+            <input type="file" class="form-control-file" id="pdf" name="pdf" accept="application/pdf" required>
+            <button type="submit" class="btn btn-dark">Extract</button>
+        </div>
+        
+    </form>
+
+    {% if entities %}
+        <div class="mt-5">
+            <h3>Extracted Entities:</h3>
+            {% for page, page_entities in entities %}
+                <div class="mb-4">
+                    <h5>{{ page }}</h5>
+                    <ul class="list-group">
+                        {% for entity in page_entities %}
+                            <li class="list-group-item">{{ entity }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+    <p></p>
+        <p>No entities extracted yet. Upload a PDF to extract entities.</p>
+    {% endif %}
+</div>
+{% endblock %}

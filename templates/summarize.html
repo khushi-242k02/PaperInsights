@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}Summarize Page{% endblock %}
+
+{% block content %} 
+   
+<div class="container mt-2">
+ 
+<h3 class="text-center">Upload your research paper to get the summary </h3>
+    <form method="post" enctype="multipart/form-data">
+        <div class="form-group mt-4">
+        <label for="pdf">Choose PDF:</label>
+        <input type="file" name="pdf" accept=".pdf" required>
+        <button type="submit" class="btn btn-dark">Summarize</button>
+        </div>
+
+    </form>
+
+    {% if summaries %}
+    <div class="mt-3">
+    <h5>Here are the page-wise summaries for your research paper!</h5>
+     
+        {% for summary in summaries %}
+            <p><strong>Page {{ loop.index }} Summary:</strong></p>
+            <p>{{ summary }}</p>
+            <hr>
+        {% endfor %}
+    </div>
+{% endif %}
+
+
+    </div>
+    {% endblock %}

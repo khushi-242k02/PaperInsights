@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %}Home Page{% endblock %}
+
+{% block content %}
+  
+<div class="main-container" style="display: flex; align-items: center; justify-content: center; height: 100vh; padding: 0 20px;">
+    <div class="image-container" style="flex: 1; text-align: center; margin-right: 20px;">
+        <img src="{{ url_for('static', filename='images/img2.jpg') }}" alt="Centered Image" style="max-width: 100%; height: auto; margin-left: 20px;">
+    </div>
+    <div class="text-box" style="flex: 1; background-color: #e9ecef; padding: 20px; border-radius: 12px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); margin-left: 20px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center;">
+        <h1>Welcome to PaperInsights</h1>
+        <h5>Discover research paper summaries and insights!</h5>
+        <p>Effortlessly <span class="typed" data-typed-items="Summarize, Extract Entities, Generate Word Cloud">summarize</span> to gain deeper insights from your research paper.</p>
+    </div>
+</div>
+
+<style>
+    /* Prevent scrolling on the page */
+    html, body {
+        height: 100%;
+        margin: 0;
+        overflow: hidden; /* Disable scrolling */
+    }
+
+    .main-container {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Center the content horizontally */
+        height: 100vh; /* Take full viewport height */
+        padding: 0 20px;
+    }
+
+    .image-container {
+        flex: 1;
+        text-align: center;
+        margin-right: 20px;
+    }
+
+    .text-box {
+        flex: 1;
+        background-color: #e9ecef;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center text vertically inside the box */
+        align-items: center; /* Center text horizontally inside the box */
+        text-align: center; /* Ensure the text inside the box is centered */
+    }
+</style>
+
+{% endblock %}

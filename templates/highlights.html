@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Highlights Page{% endblock %}
+
+{% block content %}
+<div class="container mt-2">
+    <h3 class="text-center">Upload your research paper to get a word cloud </h3>
+
+
+
+<form method="POST" enctype="multipart/form-data">
+    <div class="form-group mt-4">
+    <label for="pdf">Choose PDF:</label>
+    <input type="file" name="pdf" id="pdf" required>
+    <button type="submit" class="btn btn-dark">Generate</button>
+</div>
+</form>
+
+{% if wordcloud_img %}
+    
+    <div style="text-align: center;">
+        <h5>Generated Word Cloud</h5>
+        <img src="data:image/png;base64,{{ wordcloud_img }}" alt="Word Cloud" style="max-width: 100%; height: auto;">
+    </div>
+{% endif %}
+
+</div>
+{% endblock %}
